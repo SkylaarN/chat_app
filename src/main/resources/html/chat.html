@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat App</title>
+    <link rel="stylesheet" href="../css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+<section class="chat-container">
+    <!-- Chat header with profile info and options -->
+    <div class="chat-header">
+        <div class="user-info">
+            <img src="../js/chat-app.jpeg" alt="User Profile" class="profile-pic">
+            <span class="user-name">Nkululeko WTC</span>
+        </div>
+        <div class="chat-options">
+            <span class="options-icon">⋮</span>
+        </div>
+    </div>
 
+    <!-- Chat window to display messages -->
+    <div class="chat-window" id="chatWindow"></div>
+
+    <!-- Input area for messages, files, and voice recording -->
+    <div class="input-container">
+        <button class="file-attach" title="Attach Files"><i class="fas fa-paperclip"></i></button>
+        <input type="text" id="messageInput" placeholder="Type your message..." />
+        <button class="voice-record" title="Record Voice"><i class="fas fa-microphone">&nbsp;&nbsp;</i></button>
+        <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+</section>
+<script src="../js/app.js"></script>
 </body>
 </html>
+
+
