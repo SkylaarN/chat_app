@@ -78,15 +78,14 @@ body {
 
 /* Message bubble for sent messages */
 .message-bubble {
-    display: inline-block;
     padding: 10px 15px;
     border-radius: 20px;
-    max-width: 70%;
+    max-width: 15%;
     word-wrap: break-word;
     margin-bottom: 10px;
 }
 
-/* Sent message (aligns right) */
+/* Sent message styles */
 .sent-message {
     background-color: #007bff;
     color: white;
@@ -123,7 +122,7 @@ body {
     background-color: #007bff;
     border: none;
     color: white;
-    border-radius: 50%;
+    border-radius: 20%;
     cursor: pointer;
 }
 
