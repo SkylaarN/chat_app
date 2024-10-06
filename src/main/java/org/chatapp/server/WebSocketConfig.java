@@ -1,23 +1,47 @@
 package org.chatapp.server;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.messaging.simp.config.MessageBrokerRegistry;
-import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
-import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
-import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
+import io.javalin.Javalin;
+import io.javalin.websocket.WsContext;
 
-@Configuration
-@EnableWebSocketMessageBroker
-public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
-    @Override
-    public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/chat").setAllowedOriginPatterns("*").withSockJS();
-    }
+public class WebSocketConfig {
 
-    @Override
-    public void configureMessageBroker(MessageBrokerRegistry config) {
-        config.enableSimpleBroker("/topic");
-        config.setApplicationDestinationPrefixes("/app");
+    // Store connected clients
+    private static Set<WsContext> connectedClients = ConcurrentHashMap.newKeySet();
+
+    public static void configure(Javalin app) {
+
+        // WebSocket configuration
+        app.ws("/chat", ws -> {
+
+            // When a client connects
+            ws.onConnect(ctx -> {
+                connectedClients.add(ctx);
+                System.out.println("Connected: " + ctx.sessionId());
+            });
+
+            // When a client sends a message
+            ws.onMessage(ctx -> {
+                String message = ctx.message();
+
+                // Broadcast message to all connected clients
+                for (WsContext client : connectedClients) {
+                    client.send(message);
+                }
+            });
+
+            // When a client disconnects
+            ws.onClose(ctx -> {
+                connectedClients.remove(ctx);
+                System.out.println("Disconnected: " + ctx.sessionId());
+            });
+
+            // On error
+            ws.onError(ctx -> {
+                System.out.println("Error: " + ctx.error());
+            });
+        });
     }
 }

@@ -1,5 +1,0 @@
-org/chatapp/server/Server.class
-org/chatapp/httpapi/api.class
-org/chatapp/server/WebSocketConfig.class
-org/chatapp/server/ChatController.class
-org/chatapp/server/model/ChatMessage.class

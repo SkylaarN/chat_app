@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f9;
+    margin: 0;
+    padding: 0;
+}
+
+.group-info {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.group-info h2 {
+    text-align: center;
+    color: #333;
+}
+
+.files {
+    margin: 20px 0;
+}
+
+.files h3 {
+    color: #5e5e7a;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    color: #333;
+}
+
+.icon-photo:before { content: "\1F4F8"; } /* Unicode camera icon */
+.icon-video:before { content: "\1F4FD"; } /* Unicode video icon */
+.icon-file:before  { content: "\1F4C4"; } /* Unicode file icon */
+.icon-audio:before { content: "\1F3A4"; } /* Unicode mic icon */
+.icon-link:before  { content: "\1F517"; } /* Unicode link icon */
+.icon-voice:before { content: "\1F3A4"; } /* Unicode mic icon */
+
+.photo-thumbnails {
+    display: flex;
+    gap: 5px;
+}
+
+.photo-thumbnails img {
+    width: 45%;
+    border-radius: 5px;
+}

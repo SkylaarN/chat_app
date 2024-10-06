@@ -1,0 +1,151 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    height: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #007bff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Chat options (three-dot menu) */
+.chat-options {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.options-icon {
+    display: inline-block;
+}
+
+/* Chat window to display the messages */
+.chat-window {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+    background-color: #fafafa;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.chat-window p {
+    margin: 5px 0;
+}
+
+/* Message bubble for sent messages */
+.message-bubble {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 15%;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+/* Sent message styles */
+.sent-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+/* If you want to include received messages later, you can use this */
+.received-message {
+    background-color: #eaeaea;
+    color: black;
+    align-self: flex-start;
+}
+
+/* Input container at the bottom */
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
+}
+
+/* Attach file button */
+.file-attach {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 0;
+}
+
+/* Voice record button */
+.voice-record {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0;
+}

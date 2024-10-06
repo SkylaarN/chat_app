@@ -1,31 +1,25 @@
 package org.chatapp.server;
 
-import org.springframework.boot.web.servlet.error.ErrorController;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import io.javalin.Javalin;
+import io.javalin.http.HttpStatus;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpServletRequest;
+public class CustomErrorController {
 
-@Controller
-public class CustomErrorController implements ErrorController {
+    public static void configure(Javalin app) {
+        // Handle 404 Not Found error
+        app.error(HttpStatus.NOT_FOUND.getCode(), ctx -> {
+            ctx.result("404 - Page Not Found!");
+        });
 
-    @RequestMapping("/error")
-    @ResponseBody
-    public String handleError(HttpServletRequest request) {
-        Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
+        // Handle 500 Internal Server Error
+        app.error(HttpStatus.INTERNAL_SERVER_ERROR.getCode(), ctx -> {
+            ctx.result("500 - Internal Server Error!");
+        });
 
-        if (status != null) {
-            Integer statusCode = Integer.valueOf(status.toString());
-
-            if (statusCode == HttpStatus.NOT_FOUND.value()) {
-                return "404 - Page Not Found!";
-            } else if (statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
-                return "500 - Internal Server Error!";
-            }
-        }
-        return "Error occurred!";
+        // General exception handling
+        app.exception(Exception.class, (e, ctx) -> {
+            ctx.status(HttpStatus.INTERNAL_SERVER_ERROR.getCode());
+            ctx.result("An unexpected error occurred: " + e.getMessage());
+        });
     }
 }
