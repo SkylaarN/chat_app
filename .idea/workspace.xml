@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4d97d68-d89b-46b2-b715-94dbd9b5468b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatapp/server/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatapp/server/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatapp/server/CustomErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatapp/server/CustomErrorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatapp/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatapp/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatapp/server/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatapp/server/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/chatapp-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/chatapp/httpapi/api.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/chatapp/server/ChatController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/chatapp/server/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/chatapp/server/WebSocketConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/chatapp/server/model/ChatMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/api/apitest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/database/databasetest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/server/servertest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/chatapp/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/chatapp/server/Server.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +56,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\thatomofficial\personal\chat_app\src\main\resources\public" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Server">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.chatapp.server.Server" />
