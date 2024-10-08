@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo white-triangle"></div>
+                <span>Design Chat</span>
+            </div>
+            <div class="menu">
+                <div class="menu-item active"><div><img src="folder.png" style="width:15%; height: 15%;"></div>All Chats</div>
+                <div class="menu-item"><div><img src="folder.png" style="width:15%; height: 15%;"></div>Work</div>
+                <div class="menu-item"><div><img src="folder.png" style="width:15%; height: 15%;"></div>Friends</div>
+                <div class="menu-item"><div><img src="folder.png" style="width:15%; height: 15%;"></div>Archived</div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Section -->
+        <main class="main-chat">
+            <div class="chat-header">
+                <h2>Design Chat</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            <div class="chat-content">
+                <!-- Chat Messages -->
+                <div class="message-container sent">
+                    <img src="avatar1.png" alt="User Avatar" class="avatar">
+                    <div class="message-content">
+                        <p><strong>Jasmin Lowery</strong></p>
+                        <p>I've added new icons to our design system. You can use them for your project.</p>
+                        <span class="time">09:34 AM</span>
+                    </div>
+                </div>
+
+                <div class="message-container received">
+                    <img src="avatar2.png" alt="User Avatar" class="avatar">
+                    <div class="message-content">
+                        <p><strong>Alex Hunt</strong></p>
+                        <p>Hey guys! Important news!</p>
+                        <span class="time">09:36 AM</span>
+                    </div>
+                </div>
+                
+                <!-- Additional Messages can be added here -->
+            </div>
+            <div class="chat-footer">
+                <input type="text" placeholder="Type your message...">
+                <button>Send</button>
+            </div>
+        </main>
+
+        <!-- Group Info Section -->
+        <aside class="group-info">
+            <h3>Group Information</h3>
+            <div class="info-block">
+                <h4>Files</h4>
+                <ul>
+                    <li>265 Photos</li>
+                    <li>13 Videos</li>
+                    <li>5 Shared Links</li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h4>Members</h4>
+                <ul class="members-list">
+                    <li>Jasmin Lowery</li>
+                    <li>Alex Hunt</li>
+                    <li>Omar Campos</li>
+                    <!-- Additional members can be added here -->
+                </ul>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
