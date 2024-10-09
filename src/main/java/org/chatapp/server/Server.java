@@ -5,7 +5,7 @@ import io.javalin.http.staticfiles.Location;
 
 public class Server {
 
-    private static final String PAGES_DIR = "/public";
+    private static final String PAGES_DIR = "/public/html";
     private static final int PORT = 8080;
     private final Javalin appServer;
 
