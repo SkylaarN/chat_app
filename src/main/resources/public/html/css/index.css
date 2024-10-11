@@ -1,5 +1,5 @@
 body {
-        background-image: url('../js/chat-app.jpeg'); /* Background image */
+        background-image: url('../../js/chat-app.jpeg'); /* Background image */
         background-size: cover; /* Cover entire viewport */
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Prevent repeating */
